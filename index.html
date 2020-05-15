@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <title>downarrow.net</title>
+  <meta name="description" content="downarrow.net">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="jsfile.js"></script>
+  </head>
+
+<body>
+  <! –– Do not adjust navigation elements––>
+
+  <div class="unicode">
+                  <p>
+                  <br>downarrow.net
+                  </p>
+          </div>
+
+
+              <br><div id="clockbox"></div>
+
+              <script type="text/javascript">
+              function GetClock(){
+              var d=new Date();
+              var nmonth=(d.getMonth()+1),ndate=d.getDate(),nyear=d.getFullYear();
+              if(nmonth<=9) nmonth="0"+nmonth;
+              if(ndate<=9) ndate="0"+ndate;
+              var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+              if(nmin<=9) nmin="0"+nmin;
+              if(nsec<=9) nsec="0"+nsec;
+
+              var clocktext=""+nyear+"-"+nmonth+"-"+ndate+" "+nhour+":"+nmin+":"+nsec+"";
+              document.getElementById('clockbox').innerHTML=clocktext;
+              }
+
+              GetClock();
+              setInterval(GetClock,1000);
+              </script>
+
+            </div>
+      </div>
+
+<! –– Adjust landing content here -–>
+
+      <div class="page-content">
+        <p>
+        <br>arena images here
+        </p>
+    </div>
+
+</body>
+</html>
